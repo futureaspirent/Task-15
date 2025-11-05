@@ -13,7 +13,7 @@ const password = document.getElementById("password");
     autoToggle(password);
     autoToggle(rePassword);
 
-    // ✅ Check password match
+    
     checkBtn.addEventListener("click", () => {
       if (password.value === "" || rePassword.value === "") {
         message.textContent = "Please enter both fields!";
@@ -27,7 +27,7 @@ const password = document.getElementById("password");
       }
     });
 
-    // ✅ Password strength checker (does not disturb message check)
+    
     password.addEventListener("input", () => {
       const val = password.value;
 
@@ -45,4 +45,5 @@ const password = document.getElementById("password");
         strengthMsg.textContent = "Strength: Strong";
         strengthMsg.className = "strong";
       }
+
     });
